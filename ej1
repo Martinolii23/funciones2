@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void cambio(int *a, int *b);
+
+void cambio(int *a, int *b){
+	int temp = *a;
+	*a=*b;
+	*b=temp;
+}
+
+	int main ()
+	{
+		int a = 1;
+		int b = 2;
+		
+		printf ("antes del cambio a = %d\n", a);
+		printf ("antes del cambio b = %d\n", b);
+		cambio (&a, &b);
+		printf("despues del cambio a = %d\n", a);
+		printf("despues del cambio b = %d\n", b);
+		
+		return 0;
+		
+	}
